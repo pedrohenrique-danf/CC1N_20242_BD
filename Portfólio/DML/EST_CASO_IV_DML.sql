@@ -1,0 +1,48 @@
+INSERT INTO ALUNO (ALUNO_CPF, ALUNO_NOME, ALUNO_DATA_NASC, ALUNO_UF, ALUNO_CIDADE, ALUNO_BAIRRO, ALUNO_RUA, ALUNO_NUMRESID) VALUES
+(12345678901, 'Carlos Silva', '2000-01-15', 'SP', 'São Paulo', 'Centro', 'Rua A', 100),
+(23456789012, 'Ana Oliveira', '1995-05-20', 'RJ', 'Rio de Janeiro', 'Zona Sul', 'Rua B', 200),
+(34567890123, 'Marcos Santos', '1990-10-10', 'MG', 'Belo Horizonte', 'Savassi', 'Rua C', 300),
+(45678901234, 'Fernanda Costa', '1985-12-25', 'RS', 'Porto Alegre', 'Centro Histórico', 'Rua D', 400),
+(56789012345, 'Luciana Pereira', '2002-07-05', 'PR', 'Curitiba', 'Batel', 'Rua E', 500);
+
+INSERT INTO MODALIDADE (MODALIDADE_ID, MODALIDADE_NOME) VALUES
+(1, 'Musculação'),
+(2, 'Pilates'),
+(3, 'Yoga'),
+(4, 'CrossFit'),
+(5, 'Boxe');
+
+INSERT INTO AULA (AULA_ID, AULA_CAPACIDADE, AULA_HORÁRIO, AULA_MOD) VALUES
+(101, 20, '08:00:00', 1),
+(102, 15, '09:30:00', 2),
+(103, 25, '11:00:00', 3),
+(104, 30, '18:00:00', 4),
+(105, 10, '19:30:00', 5);
+
+INSERT INTO PAGAMENTO (PAGAMENTO_ISBN, PAGAMENTO_DATA, PAGAMENTO_VALOR, PAGAMENTO_PAGO, PAGAMENTO_PENDENTE, PAGAMENTO_ALN) VALUES
+('978-3-16-148410-0', '2024-01-01', 'R$150', 'R$150', 'R$0', 12345678901),
+('978-3-16-148410-1', '2024-02-01', 'R$200', 'R$150', 'R$50', 23456789012),
+('978-3-16-148410-2', '2024-03-01', 'R$180', 'R$180', 'R$0', 34567890123),
+('978-3-16-148410-3', '2024-04-01', 'R$250', 'R$200', 'R$50', 45678901234),
+('978-3-16-148410-4', '2024-05-01', 'R$300', 'R$300', 'R$0', 56789012345);
+
+INSERT INTO INSTRUTOR (INSTRUTOR_ID, INSTRUTOR_NOME, INSTRUTOR_MDL) VALUES
+(1, 'João Almeida', 1),
+(2, 'Maria Fernanda', 2),
+(3, 'Carlos Augusto', 3),
+(4, 'Fernanda Sousa', 4),
+(5, 'Lucas Pereira', 5);
+
+INSERT INTO PLANO_TREINAMENTO (PLANO_TREINAMENTO_ID, PROGRESSO, PLANO_TREINAMENTO_INST) VALUES
+(1, '50% concluído', 1),
+(2, '80% concluído', 2),
+(3, '20% concluído', 3),
+(4, '90% concluído', 4),
+(5, '100% concluído', 5);
+
+INSERT INTO ALUNO_MOD (ALN_MDL, MDL_ALN) VALUES
+(12345678901, 1),
+(23456789012, 2),
+(34567890123, 3),
+(45678901234, 4),
+(56789012345, 5);
